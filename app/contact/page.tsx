@@ -6,9 +6,9 @@ export default function ContactPage() {
       </h1>
 
       <div className="space-y-3">
-        <p>Email: photoengage@school.edu</p>
-        <p>Phone: +855 XX XXX XXX</p>
-        <p>Location: School Campus</p>
+        <p>Email: tyratter0@gmail.com</p>
+        <p>Phone: +855 93 7255 77</p>
+        <p>Location: ភូមិផ្អាវ​ ឃុំផ្អាវ ស្រុកបាធាយ ខេត្តកំពង់ចាម</p>
       </div>
     </main>
   );

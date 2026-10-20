@@ -121,7 +121,7 @@ export default function Home() {
               </h3>
 
               <p className="text-gray-300 mt-2 mb-4">
-                Building dreams, achieving goals, and creating memories for tomorrow.
+                Building dreams, achieving goals, and creating memories.
               </p>
 
               <Link

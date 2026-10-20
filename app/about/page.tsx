@@ -6,8 +6,8 @@ export default function AboutPage() {
       </h1>
 
       <p className="text-gray-300 text-lg">
-        Photo Engage is a platform for sharing and preserving school memories,
-        events, celebrations and student activities.
+        Our Memories Together is a platform for sharing and preserving us memories,
+        events, celebrations and Trip activities.
       </p>
     </main>
   );
