@@ -7,7 +7,7 @@ export default function AboutPage() {
 
       <p className="text-gray-300 text-lg">
         Our Memories Together is a platform for sharing and preserving us memories,
-        events, celebrations and Trip activities.
+        events, celebrations and Trip activities. ssdsds
       </p>
     </main>
   );
