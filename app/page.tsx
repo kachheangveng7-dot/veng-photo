@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-950 text-white">
       {/* Navigation */}
       <nav className="flex justify-between items-center px-10 py-6 border-b border-gray-800">
         <h1 className="text-3xl font-bold text-blue-500">
@@ -35,7 +35,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="text-center py-24">
         <h1 className="text-7xl font-bold">
-          Our Memeries Ter with Lang
+          Our Memories Together
         </h1>
 
         <p className="text-xl text-gray-400 mt-6">
@@ -67,7 +67,7 @@ export default function Home() {
               </p>
 
               <Link
-                href="/gallery"
+                href="/gallery/trip"
                 className="inline-block bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700"
               >
                 View Gallery
@@ -93,7 +93,7 @@ export default function Home() {
               </p>
 
               <Link
-                href="/gallery"
+                href="/gallery/graduation"
                 className="inline-block bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700"
               >
                 View Gallery
@@ -119,7 +119,7 @@ export default function Home() {
               </p>
 
               <Link
-                href="/gallery"
+                href="/gallery/future"
                 className="inline-block bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700"
               >
                 View Gallery
