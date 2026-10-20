@@ -14,12 +14,31 @@ export default function FutureGallery() {
         🌟 Future Together Gallery
       </h1>
 
-      <img
-        src="/images2/future.jpg"
-        alt="Future Together"
-        className="w-full rounded-xl"
-      />
+      <div className="grid md:grid-cols-2 gap-6">
+        <img
+          src="/future/future1.jpg"
+          alt="Future 1"
+          className="w-full rounded-xl"
+        />
+
+        <img
+          src="/future/future2.jpg"
+          alt="Future 2"
+          className="w-full rounded-xl"
+        />
+
+        <img
+          src="/future/future3.jpg"
+          alt="Future 3"
+          className="w-full rounded-xl"
+        />
+
+        <img
+          src="/future/future4.jpg"
+          alt="Future 4"
+          className="w-full rounded-xl"
+        />
+      </div>
     </main>
   );
 }
-``
