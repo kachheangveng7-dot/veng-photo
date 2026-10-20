@@ -14,11 +14,31 @@ export default function GraduationGallery() {
         🎓 Graduation Gallery
       </h1>
 
-      <img
-        src="/images1/graduation.jpg"
-        alt="Graduation"
-        className="w-full rounded-xl"
-      />
+      <div className="grid md:grid-cols-2 gap-6">
+        <img
+          src="/graduation/graduation1.jpg"
+          alt="Graduation 1"
+          className="w-full rounded-xl shadow-lg"
+        />
+
+        <img
+          src="/graduation/graduation2.jpg"
+          alt="Graduation 2"
+          className="w-full rounded-xl shadow-lg"
+        />
+
+        <img
+          src="/graduation/graduation3.jpg"
+          alt="Graduation 3"
+          className="w-full rounded-xl shadow-lg"
+        />
+
+        <img
+          src="/graduation/graduation4.jpg"
+          alt="Graduation 4"
+          className="w-full rounded-xl shadow-lg"
+        />
+      </div>
     </main>
   );
 }
