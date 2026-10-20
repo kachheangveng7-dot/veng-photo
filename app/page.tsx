@@ -39,7 +39,7 @@ export default function Home() {
         </h1>
 
         <p className="text-xl text-gray-400 mt-6">
-          Browse school memories and event photos.
+          Ty Ratter and Chem Soklang
         </p>
       </section>
 
