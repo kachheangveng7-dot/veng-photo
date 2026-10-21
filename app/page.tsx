@@ -58,44 +58,44 @@ export default function Home() {
       {/* Navigation */}
       <nav className="flex flex-col md:flex-row justify-between items-center px-6 md:px-10 py-6 border-b border-gray-800 gap-4">
         <h1 className="text-xl md:text-3xl font-bold text-blue-400">
-          📸 Our Memories Together
+          📸 អនុស្សាវរីយ៍របស់ពួកយើង
         </h1>
 
         <div className="flex flex-wrap justify-center gap-4 text-sm md:text-base">
           <Link href="/" className="hover:text-blue-400">
-            Home
+            ទំព័រដើម
           </Link>
 
           <Link href="/gallery" className="hover:text-blue-400">
-            Gallery
+            វិចិត្រសាល
           </Link>
 
           <Link href="/events" className="hover:text-blue-400">
-            Events
+            ព្រឹត្តិការណ៍
           </Link>
 
           <Link href="/about" className="hover:text-blue-400">
-            About
+            អំពីយើង
           </Link>
 
           <Link href="/contact" className="hover:text-blue-400">
-            Contact
+            ទំនាក់ទំនង
           </Link>
         </div>
       </nav>
 
-      {/* Hero Section */}
+      {/* Hero */}
       <section className="text-center py-16 md:py-24 px-4">
         <h1 className="text-4xl md:text-7xl font-bold text-white">
-          Our Memories Together ❤️
+          អនុស្សាវរីយ៍របស់ពួកយើង ❤️
         </h1>
 
         <p className="text-lg md:text-2xl text-gray-300 mt-6">
-          Ty Ratter & Chem Soklang
+          ទី រ៉ាត់ទ័រ & ជីម សុខឡាង
         </p>
 
         <p className="text-sm md:text-lg text-gray-400 mt-4">
-          Capturing every special moment of our journey together.
+          រក្សាទុកគ្រប់ពេលវេលាពិសេសៗនៃដំណើរជីវិតរបស់ពួកយើង។
         </p>
       </section>
 
@@ -103,11 +103,11 @@ export default function Home() {
       <section className="px-6 pb-20">
         <div className="max-w-6xl mx-auto bg-white/10 backdrop-blur-lg rounded-3xl p-8 shadow-2xl">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-3">
-            ❤️ Together Since
+            ❤️ ចាប់តាំងពីពួកយើងបានជួបគ្នា
           </h2>
 
           <p className="text-center text-gray-300 mb-8">
-            Ty Ratter & Chem Soklang
+            ទី រ៉ាត់ទ័រ & ជីម សុខឡាង
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-6 gap-4 text-center">
@@ -115,42 +115,42 @@ export default function Home() {
               <p className="text-4xl font-bold text-pink-400">
                 {timeTogether.years}
               </p>
-              <p className="text-gray-300">Years</p>
+              <p className="text-gray-300">ឆ្នាំ</p>
             </div>
 
             <div className="bg-white/10 rounded-2xl p-5">
               <p className="text-4xl font-bold text-purple-400">
                 {timeTogether.months}
               </p>
-              <p className="text-gray-300">Months</p>
+              <p className="text-gray-300">ខែ</p>
             </div>
 
             <div className="bg-white/10 rounded-2xl p-5">
               <p className="text-4xl font-bold text-blue-400">
                 {timeTogether.days}
               </p>
-              <p className="text-gray-300">Days</p>
+              <p className="text-gray-300">ថ្ងៃ</p>
             </div>
 
             <div className="bg-white/10 rounded-2xl p-5">
               <p className="text-4xl font-bold text-green-400">
                 {timeTogether.hours}
               </p>
-              <p className="text-gray-300">Hours</p>
+              <p className="text-gray-300">ម៉ោង</p>
             </div>
 
             <div className="bg-white/10 rounded-2xl p-5">
               <p className="text-4xl font-bold text-yellow-400">
                 {timeTogether.minutes}
               </p>
-              <p className="text-gray-300">Minutes</p>
+              <p className="text-gray-300">នាទី</p>
             </div>
 
             <div className="bg-white/10 rounded-2xl p-5">
               <p className="text-4xl font-bold text-red-400">
                 {timeTogether.seconds}
               </p>
-              <p className="text-gray-300">Seconds</p>
+              <p className="text-gray-300">វិនាទី</p>
             </div>
           </div>
         </div>
@@ -159,7 +159,7 @@ export default function Home() {
       {/* Featured Memories */}
       <section className="max-w-6xl mx-auto px-6 pb-20">
         <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-          Featured Memories
+          អនុស្សាវរីយ៍ពិសេសៗ
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -173,18 +173,18 @@ export default function Home() {
 
             <div className="p-5">
               <h3 className="text-2xl font-bold">
-                🌴 Trip
+                🌴 ដំណើរកម្សាន្ត
               </h3>
 
               <p className="text-gray-300 mt-2 mb-4">
-                Educational trips and outdoor adventures.
+                ដំណើរកម្សាន្ត និងសកម្មភាពដ៏រីករាយ។
               </p>
 
               <Link
                 href="/gallery/trip"
                 className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 px-5 py-2 rounded-xl font-semibold"
               >
-                View Gallery
+                មើលរូបភាព
               </Link>
             </div>
           </div>
@@ -199,23 +199,23 @@ export default function Home() {
 
             <div className="p-5">
               <h3 className="text-2xl font-bold">
-                🎓 Graduation
+                🎓 បញ្ចប់ការសិក្សា
               </h3>
 
               <p className="text-gray-300 mt-2 mb-4">
-                Graduation day memories and achievements.
+                អនុស្សាវរីយ៍នៃថ្ងៃបញ្ចប់ការសិក្សា និងភាពជោគជ័យ។
               </p>
 
               <Link
                 href="/gallery/graduation"
                 className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 px-5 py-2 rounded-xl font-semibold"
               >
-                View Gallery
+                មើលរូបភាព
               </Link>
             </div>
           </div>
 
-          {/* Future Together */}
+          {/* Future */}
           <div className="bg-white/10 backdrop-blur-md rounded-2xl overflow-hidden shadow-2xl hover:scale-105 transition duration-300">
             <img
               src="/images2/future.jpg"
@@ -225,18 +225,18 @@ export default function Home() {
 
             <div className="p-5">
               <h3 className="text-2xl font-bold">
-                🌟 Future Together
+                🌟 អនាគតរួមគ្នា
               </h3>
 
               <p className="text-gray-300 mt-2 mb-4">
-                Building dreams, achieving goals, and creating memories.
+                កសាងក្ដីសុបិន សម្រេចគោលដៅ និងបង្កើតអនុស្សាវរីយ៍ថ្មីៗជាមួយគ្នា។
               </p>
 
               <Link
                 href="/gallery/future"
                 className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 px-5 py-2 rounded-xl font-semibold"
               >
-                View Gallery
+                មើលរូបភាព
               </Link>
             </div>
           </div>
@@ -246,7 +246,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="text-center py-10 border-t border-gray-800">
         <p className="text-gray-400">
-          ❤️ Our Memories Together • Ty Ratter & Chem Soklang
+          ❤️ អនុស្សាវរីយ៍របស់ពួកយើង • ទី រ៉ាត់ទ័រ & ជីម សុខឡាង
         </p>
       </footer>
     </main>
