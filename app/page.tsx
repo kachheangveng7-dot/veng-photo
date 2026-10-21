@@ -59,8 +59,7 @@ export default function Home() {
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500 rounded-full blur-[180px] opacity-20" />
 
       {/* Navigation */}
-      <nav className="relative z-10 flex flex-col md:flex-row justify-between items-center px-6 md:px-10 py-6 border-b border-gray-800 gap-4">
-        <h1 className="text-xl md:text-3xl font-bold text-blue-400">
+<nav className="sticky top-0 z-50 backdrop-blur-xl bg-black/30 border-b border-white/10 flex flex-col md:flex-row justify-between items-center px-6 md:px-10 py-6 gap-4">        <h1 className="text-xl md:text-3xl font-bold text-blue-400">
           📸 អនុស្សាវរីយ៍របស់ពួកយើង
         </h1>
 
