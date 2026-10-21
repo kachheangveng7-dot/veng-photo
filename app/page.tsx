@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 export default function Home() {
-  const startDate = new Date("2025-07-14T00:00:00");
+  const startDate = new Date("2026-06-20T00:00:00");
 
   const [timeTogether, setTimeTogether] = useState({
     years: 0,
@@ -59,30 +59,29 @@ export default function Home() {
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500 rounded-full blur-[180px] opacity-20" />
 
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 backdrop-blur-xl bg-black/30 border-b border-white/10 flex flex-col md:flex-row justify-between items-center px-6 md:px-10 py-6 gap-4">
-        <h1 className="text-xl md:text-3xl font-bold text-blue-400">
-          📸 Our Memories
+<nav className="sticky top-0 z-50 backdrop-blur-xl bg-black/30 border-b border-white/10 flex flex-col md:flex-row justify-between items-center px-6 md:px-10 py-6 gap-4">        <h1 className="text-xl md:text-3xl font-bold text-blue-400">
+          📸 អនុស្សាវរីយ៍របស់ពួកយើង
         </h1>
 
         <div className="flex flex-wrap justify-center gap-4 text-sm md:text-base">
           <Link href="/" className="hover:text-blue-400">
-            Home
+            ទំព័រដើម
           </Link>
 
           <Link href="/gallery" className="hover:text-blue-400">
-            Gallery
+            វិចិត្រសាល
           </Link>
 
           <Link href="/events" className="hover:text-blue-400">
-            Events
+            ព្រឹត្តិការណ៍
           </Link>
 
           <Link href="/about" className="hover:text-blue-400">
-            About Us
+            អំពីយើង
           </Link>
 
           <Link href="/contact" className="hover:text-blue-400">
-            Contact
+            ទំនាក់ទំនង
           </Link>
         </div>
       </nav>
@@ -95,15 +94,15 @@ export default function Home() {
         className="relative z-10 text-center py-16 md:py-24 px-4"
       >
         <h1 className="text-4xl md:text-7xl font-bold text-white drop-shadow-[0_0_25px_rgba(255,0,120,0.9)]">
-          Our Memories ❤️
+          អនុស្សាវរីយ៍របស់ពួកយើង ❤️
         </h1>
 
         <p className="text-lg md:text-2xl text-gray-300 mt-6">
-          Ka Chheangveng &amp; Min MengChheng
+          Ka Chheangveng & Min Mengchheng
         </p>
 
         <p className="text-sm md:text-lg text-gray-400 mt-4">
-          Preserving every special moment of our journey together.
+          រក្សាទុកគ្រប់ពេលវេលាពិសេសៗនៃដំណើរជីវិតរបស់ពួកយើង។
         </p>
 
         <motion.div
@@ -130,42 +129,42 @@ export default function Home() {
           className="max-w-6xl mx-auto bg-white/10 backdrop-blur-lg rounded-3xl p-8 shadow-2xl"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-3">
-            ❤️ Since We First Met
+            ❤️ ចាប់តាំងពីពួកយើងបានជួបគ្នា
           </h2>
 
           <p className="text-center text-gray-300 mb-8">
-            Ka Chheangveng &amp; Min MengChheng
+            Ka Chheangveng & Min Mengchheng
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-6 gap-4 text-center">
             {[
               {
-                label: "Years",
+                label: "ឆ្នាំ",
                 value: timeTogether.years,
                 color: "text-pink-400",
               },
               {
-                label: "Months",
+                label: "ខែ",
                 value: timeTogether.months,
                 color: "text-purple-400",
               },
               {
-                label: "Days",
+                label: "ថ្ងៃ",
                 value: timeTogether.days,
                 color: "text-blue-400",
               },
               {
-                label: "Hours",
+                label: "ម៉ោង",
                 value: timeTogether.hours,
                 color: "text-green-400",
               },
               {
-                label: "Minutes",
+                label: "នាទី",
                 value: timeTogether.minutes,
                 color: "text-yellow-400",
               },
               {
-                label: "Seconds",
+                label: "វិនាទី",
                 value: timeTogether.seconds,
                 color: "text-red-400",
               },
@@ -192,7 +191,7 @@ export default function Home() {
       {/* Featured Memories */}
       <section className="relative z-10 max-w-6xl mx-auto px-6 pb-20">
         <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-          Special Memories
+          អនុស្សាវរីយ៍ពិសេសៗ
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -209,19 +208,17 @@ export default function Home() {
             />
 
             <div className="p-5">
-              <h3 className="text-2xl font-bold">
-                🌴 Trips & Adventures
-              </h3>
+              <h3 className="text-2xl font-bold">🌴 ដំណើរកម្សាន្ត</h3>
 
               <p className="text-gray-300 mt-2 mb-4">
-                Fun trips and unforgettable experiences together.
+                ដំណើរកម្សាន្ត និងសកម្មភាពដ៏រីករាយ។
               </p>
 
               <Link
                 href="/gallery/trip"
                 className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 px-5 py-2 rounded-xl font-semibold hover:scale-105 transition"
               >
-                View Photos
+                មើលរូបភាព
               </Link>
             </div>
           </motion.div>
@@ -239,19 +236,17 @@ export default function Home() {
             />
 
             <div className="p-5">
-              <h3 className="text-2xl font-bold">
-                🎓 Graduation
-              </h3>
+              <h3 className="text-2xl font-bold">🎓 បញ្ចប់ការសិក្សា</h3>
 
               <p className="text-gray-300 mt-2 mb-4">
-                Celebrating milestones, achievements, and success.
+                អនុស្សាវរីយ៍នៃថ្ងៃបញ្ចប់ការសិក្សា និងភាពជោគជ័យ។
               </p>
 
               <Link
                 href="/gallery/graduation"
                 className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 px-5 py-2 rounded-xl font-semibold hover:scale-105 transition"
               >
-                View Photos
+                មើលរូបភាព
               </Link>
             </div>
           </motion.div>
@@ -269,20 +264,17 @@ export default function Home() {
             />
 
             <div className="p-5">
-              <h3 className="text-2xl font-bold">
-                🌟 Our Future Together
-              </h3>
+              <h3 className="text-2xl font-bold">🌟 អនាគតរួមគ្នា</h3>
 
               <p className="text-gray-300 mt-2 mb-4">
-                Building dreams, achieving goals, and creating beautiful
-                memories together.
+                កសាងក្ដីសុបិន សម្រេចគោលដៅ និងបង្កើតអនុស្សាវរីយ៍ថ្មីៗជាមួយគ្នា។
               </p>
 
               <Link
                 href="/gallery/future"
                 className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 px-5 py-2 rounded-xl font-semibold hover:scale-105 transition"
               >
-                View Photos
+                មើលរូបភាព
               </Link>
             </div>
           </motion.div>
@@ -291,17 +283,17 @@ export default function Home() {
 
       {/* Footer */}
       <motion.footer
-        animate={{ opacity: [0.6, 1, 0.6] }}
-        transition={{
-          repeat: Infinity,
-          duration: 3,
-        }}
-        className="relative z-10 text-center py-10 border-t border-gray-800"
-      >
-        <p className="text-gray-400">
-          ❤️ Our Memories • Ka Chheangveng &amp; Min MengChheng
-        </p>
-      </motion.footer>
+  animate={{ opacity: [0.6, 1, 0.6] }}
+  transition={{
+    repeat: Infinity,
+    duration: 3,
+  }}
+  className="relative z-10 text-center py-10 border-t border-gray-800"
+>
+  <p className="text-gray-400">
+    ❤️ Our Memories • Ka Chheangveng & Min MengChheng
+  </p>
+</motion.footer>
     </main>
   );
 }
