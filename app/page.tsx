@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const startDate = new Date("2025-07-14T00:00:00");
@@ -25,13 +26,11 @@ export default function Home() {
 
       if (days < 0) {
         months--;
-
         const previousMonthDays = new Date(
           now.getFullYear(),
           now.getMonth(),
           0
         ).getDate();
-
         days += previousMonthDays;
       }
 
@@ -54,9 +53,14 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-950 text-white">
+    <main className="relative overflow-hidden min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-950 text-white">
+
+      {/* Background Glow */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-pink-500 rounded-full blur-[180px] opacity-20"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500 rounded-full blur-[180px] opacity-20"></div>
+
       {/* Navigation */}
-      <nav className="flex flex-col md:flex-row justify-between items-center px-6 md:px-10 py-6 border-b border-gray-800 gap-4">
+      <nav className="relative z-10 flex flex-col md:flex-row justify-between items-center px-6 md:px-10 py-6 border-b border-gray-800 gap-4">
         <h1 className="text-xl md:text-3xl font-bold text-blue-400">
           📸 អនុស្សាវរីយ៍របស់ពួកយើង
         </h1>
@@ -85,8 +89,13 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <section className="text-center py-16 md:py-24 px-4">
-        <h1 className="text-4xl md:text-7xl font-bold text-white">
+      <motion.section
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="relative z-10 text-center py-16 md:py-24 px-4"
+      >
+        <h1 className="text-4xl md:text-7xl font-bold text-white drop-shadow-[0_0_25px_rgba(255,0,100,0.8)]">
           អនុស្សាវរីយ៍របស់ពួកយើង ❤️
         </h1>
 
@@ -97,11 +106,30 @@ export default function Home() {
         <p className="text-sm md:text-lg text-gray-400 mt-4">
           រក្សាទុកគ្រប់ពេលវេលាពិសេសៗនៃដំណើរជីវិតរបស់ពួកយើង។
         </p>
-      </section>
 
-      {/* Relationship Counter */}
-      <section className="px-6 pb-20">
-        <div className="max-w-6xl mx-auto bg-white/10 backdrop-blur-lg rounded-3xl p-8 shadow-2xl">
+        <motion.div
+          animate={{
+            y: [0, -15, 0],
+            scale: [1, 1.08, 1],
+          }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+          }}
+          className="text-6xl mt-8"
+        >
+          ❤️
+        </motion.div>
+      </motion.section>
+
+      {/* Counter */}
+      <section className="relative z-10 px-6 pb-20">
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-6xl mx-auto bg-white/10 backdrop-blur-lg rounded-3xl p-8 shadow-2xl"
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-3">
             ❤️ ចាប់តាំងពីពួកយើងបានជួបគ្នា
           </h2>
@@ -111,60 +139,48 @@ export default function Home() {
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-6 gap-4 text-center">
-            <div className="bg-white/10 rounded-2xl p-5">
-              <p className="text-4xl font-bold text-pink-400">
-                {timeTogether.years}
-              </p>
-              <p className="text-gray-300">ឆ្នាំ</p>
-            </div>
 
-            <div className="bg-white/10 rounded-2xl p-5">
-              <p className="text-4xl font-bold text-purple-400">
-                {timeTogether.months}
-              </p>
-              <p className="text-gray-300">ខែ</p>
-            </div>
+            {[
+              { label: "ឆ្នាំ", value: timeTogether.years, color: "text-pink-400" },
+              { label: "ខែ", value: timeTogether.months, color: "text-purple-400" },
+              { label: "ថ្ងៃ", value: timeTogether.days, color: "text-blue-400" },
+              { label: "ម៉ោង", value: timeTogether.hours, color: "text-green-400" },
+              { label: "នាទី", value: timeTogether.minutes, color: "text-yellow-400" },
+              { label: "វិនាទី", value: timeTogether.seconds, color: "text-red-400" },
+            ].map((item) => (
+              <motion.div
+                key={item.label}
+                whileHover={{
+                  scale: 1.1,
+                  y: -10,
+                }}
+                className="bg-white/10 rounded-2xl p-5"
+              >
+                <p className={`text-4xl font-bold ${item.color}`}>
+                  {item.value}
+                </p>
 
-            <div className="bg-white/10 rounded-2xl p-5">
-              <p className="text-4xl font-bold text-blue-400">
-                {timeTogether.days}
-              </p>
-              <p className="text-gray-300">ថ្ងៃ</p>
-            </div>
-
-            <div className="bg-white/10 rounded-2xl p-5">
-              <p className="text-4xl font-bold text-green-400">
-                {timeTogether.hours}
-              </p>
-              <p className="text-gray-300">ម៉ោង</p>
-            </div>
-
-            <div className="bg-white/10 rounded-2xl p-5">
-              <p className="text-4xl font-bold text-yellow-400">
-                {timeTogether.minutes}
-              </p>
-              <p className="text-gray-300">នាទី</p>
-            </div>
-
-            <div className="bg-white/10 rounded-2xl p-5">
-              <p className="text-4xl font-bold text-red-400">
-                {timeTogether.seconds}
-              </p>
-              <p className="text-gray-300">វិនាទី</p>
-            </div>
+                <p className="text-gray-300">
+                  {item.label}
+                </p>
+              </motion.div>
+            ))}
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Featured Memories */}
-      <section className="max-w-6xl mx-auto px-6 pb-20">
+      <section className="relative z-10 max-w-6xl mx-auto px-6 pb-20">
         <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
           អនុស្សាវរីយ៍ពិសេសៗ
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Trip */}
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl overflow-hidden shadow-2xl hover:scale-105 transition duration-300">
+
+          <motion.div
+            whileHover={{ scale: 1.05, y: -15 }}
+            className="bg-white/10 backdrop-blur-md rounded-2xl overflow-hidden shadow-2xl"
+          >
             <img
               src="/images/trip.jpg"
               alt="Trip"
@@ -187,10 +203,12 @@ export default function Home() {
                 មើលរូបភាព
               </Link>
             </div>
-          </div>
+          </motion.div>
 
-          {/* Graduation */}
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl overflow-hidden shadow-2xl hover:scale-105 transition duration-300">
+          <motion.div
+            whileHover={{ scale: 1.05, y: -15 }}
+            className="bg-white/10 backdrop-blur-md rounded-2xl overflow-hidden shadow-2xl"
+          >
             <img
               src="/images1/graduation.jpg"
               alt="Graduation"
@@ -213,10 +231,12 @@ export default function Home() {
                 មើលរូបភាព
               </Link>
             </div>
-          </div>
+          </motion.div>
 
-          {/* Future */}
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl overflow-hidden shadow-2xl hover:scale-105 transition duration-300">
+          <motion.div
+            whileHover={{ scale: 1.05, y: -15 }}
+            className="bg-white/10 backdrop-blur-md rounded-2xl overflow-hidden shadow-2xl"
+          >
             <img
               src="/images2/future.jpg"
               alt="Future Together"
@@ -239,16 +259,18 @@ export default function Home() {
                 មើលរូបភាព
               </Link>
             </div>
-          </div>
+          </motion.div>
+
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="text-center py-10 border-t border-gray-800">
+      <motion.footer
+        animate={{ opacity: [0.6, 1, 0.6] }}
+        transition={{ repeat: Infinity, duration: 3 }}
+        className="relative z-10 text-center py-10 border-t border-gray-800"
+      >
         <p className="text-gray-400">
           ❤️ អនុស្សាវរីយ៍របស់ពួកយើង • ទី រ៉ាត់ទ័រ & ជីម សុខឡាង
         </p>
-      </footer>
-    </main>
-  );
-}
+      </motion.footer>
